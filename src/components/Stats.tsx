@@ -14,21 +14,21 @@ export default function Stats() {
 
   const stats = [
     {
-      number: 500,
+      number: 50,
       suffix: "+",
-      label: "Clientes Atendidos",
+      label: "Clientes Satisfeitos",
       icon: Users
     },
     {
-      number: 50,
-      suffix: "M",
-      label: "Reais em Vendas Geradas",
+      number: 30,
+      suffix: "%",
+      label: "Aumento em Vendas",
       icon: DollarSign
     },
     {
       number: 4,
       suffix: "",
-      label: "Continentes",
+      label: "Países",
       icon: Globe
     },
     {
@@ -89,8 +89,8 @@ export default function Stats() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 whileHover={{ y: -10 }}
               >
-                <motion.div 
-                  className="w-20 h-20 bg-gradient-to-br from-[#FF8C00] to-[#FFD700] rounded-full flex items-center justify-center mx-auto mb-4"
+                                  <motion.div 
+                    className="w-20 h-20 bg-gradient-to-br from-[#c28a32] to-[#FFD700] rounded-full flex items-center justify-center mx-auto mb-4"
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
@@ -115,33 +115,7 @@ export default function Stats() {
           })}
         </motion.div>
 
-        <motion.div 
-          className="mt-16 text-center"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-        >
-          <div className="bg-gradient-to-r from-[#FF8C00]/10 to-[#FFD700]/10 p-8 rounded-xl border border-[#FF8C00]/20">
-            <h4 className="text-2xl font-bold text-white mb-4">
-              🚀 Crescimento Médio dos Nossos Clientes
-            </h4>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
-              <div>
-                <div className="text-3xl font-bold text-[#FF8C00]">300%</div>
-                <div className="text-gray-400">Aumento em vendas</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-[#FF8C00]">60%</div>
-                <div className="text-gray-400">Redução no custo por aquisição</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-[#FF8C00]">800%</div>
-                <div className="text-gray-400">ROI médio</div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
+        
       </div>
     </section>
   );

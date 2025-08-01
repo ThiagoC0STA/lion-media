@@ -86,21 +86,21 @@ export default function CTA() {
           >
             <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-lg border border-gray-700">
               <div className="flex justify-center mb-3">
-                <Target className="w-8 h-8 text-[#FF8C00]" />
+                <Target className="w-8 h-8 text-[#c28a32]" />
               </div>
               <h3 className="text-white font-semibold mb-2">Estratégia Personalizada</h3>
               <p className="text-gray-400 text-sm">Análise completa do seu negócio e plano de ação customizado</p>
             </div>
             <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-lg border border-gray-700">
               <div className="flex justify-center mb-3">
-                <DollarSign className="w-8 h-8 text-[#FF8C00]" />
+                <DollarSign className="w-8 h-8 text-[#c28a32]" />
               </div>
               <h3 className="text-white font-semibold mb-2">ROI Garantido</h3>
               <p className="text-gray-400 text-sm">Resultados mensuráveis em 30 dias ou seu dinheiro de volta</p>
             </div>
             <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-lg border border-gray-700">
               <div className="flex justify-center mb-3">
-                <Clock className="w-8 h-8 text-[#FF8C00]" />
+                <Clock className="w-8 h-8 text-[#c28a32]" />
               </div>
               <h3 className="text-white font-semibold mb-2">Suporte 24/7</h3>
               <p className="text-gray-400 text-sm">Equipe dedicada para acompanhar seus resultados</p>
@@ -116,16 +116,15 @@ export default function CTA() {
             className="space-y-4"
           >
             <motion.button 
-              className="bg-gradient-to-r from-[#FF8C00] to-[#FFA500] hover:from-[#FFA500] hover:to-[#FF8C00] text-white font-bold py-6 px-12 rounded-lg text-xl transition-all duration-300 relative overflow-hidden group w-full sm:w-auto"
+              className="bg-gradient-to-r from-[#c28a32] to-[#FFA500] hover:from-[#FFA500] hover:to-[#c28a32] text-white font-bold py-6 px-12 rounded-lg text-xl transition-all duration-300 relative overflow-hidden group w-full sm:w-auto"
               whileHover={{ 
                 scale: 1.05,
-                boxShadow: "0 25px 50px rgba(255, 140, 0, 0.4)"
               }}
               whileTap={{ scale: 0.95 }}
             >
               <span className="relative z-10">AGENDAR CONSULTORIA GRATUITA AGORA</span>
               <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-[#FFD700] to-[#FF8C00]"
+                className="absolute inset-0 bg-gradient-to-r from-[#FFD700] to-[#c28a32]"
                 initial={{ x: "-100%" }}
                 whileHover={{ x: "0%" }}
                 transition={{ duration: 0.3 }}

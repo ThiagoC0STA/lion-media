@@ -160,7 +160,7 @@ export default function AboutUs() {
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <motion.div 
-                    className="w-12 h-12 bg-gradient-to-br from-[#FF8C00] to-[#FFD700] rounded-full flex items-center justify-center"
+                    className="w-12 h-12 bg-gradient-to-br from-[#c28a32] to-[#FFD700] rounded-full flex items-center justify-center"
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
@@ -179,7 +179,7 @@ export default function AboutUs() {
             })}
 
             <motion.div 
-              className="mt-8 p-6 bg-gradient-to-r from-[#FF8C00]/10 to-[#FFD700]/10 rounded-lg border border-[#FF8C00]/20"
+              className="mt-8 p-6 bg-gradient-to-r from-[#c28a32]/10 to-[#FFD700]/10 rounded-lg border border-[#c28a32]/20"
               variants={rightItemVariants}
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
@@ -189,11 +189,11 @@ export default function AboutUs() {
               </h4>
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div>
-                  <div className="text-2xl font-bold text-[#FF8C00]">300%</div>
+                  <div className="text-2xl font-bold text-[#c28a32]">300%</div>
                   <div className="text-gray-400">Aumento médio em conversões</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-[#FF8C00]">50%</div>
+                  <div className="text-2xl font-bold text-[#c28a32]">50%</div>
                   <div className="text-gray-400">Redução no custo por aquisição</div>
                 </div>
               </div>

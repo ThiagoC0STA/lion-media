@@ -21,7 +21,7 @@ export default function Footer() {
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <div className="w-12 h-12 bg-gradient-to-br from-[#FF8C00] to-[#FFD700] rounded-full flex items-center justify-center text-white font-bold">
+              <div className="w-12 h-12 bg-gradient-to-br from-[#c28a32] to-[#FFD700] rounded-full flex items-center justify-center text-white font-bold">
                 L
               </div>
               <div>
@@ -38,7 +38,7 @@ export default function Footer() {
             <div className="flex gap-4">
               <motion.a 
                 href="#" 
-                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#FF8C00] transition-all duration-300"
+                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#c28a32] transition-all duration-300"
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -46,7 +46,7 @@ export default function Footer() {
               </motion.a>
               <motion.a 
                 href="#" 
-                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#FF8C00] transition-all duration-300"
+                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#c28a32] transition-all duration-300"
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -54,7 +54,7 @@ export default function Footer() {
               </motion.a>
               <motion.a 
                 href="#" 
-                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#FF8C00] transition-all duration-300"
+                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#c28a32] transition-all duration-300"
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >

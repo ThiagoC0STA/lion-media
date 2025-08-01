@@ -95,13 +95,13 @@ export default function Services() {
                 whileHover={{ y: -10 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-xl border border-gray-700 hover:border-[#FF8C00]/50 transition-all duration-300 h-full">
+                <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-xl border border-gray-700 hover:border-[#c28a32]/50 transition-all duration-300 h-full">
                   <motion.div 
                     className="flex justify-center mb-6"
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
-                    <div className="w-16 h-16 bg-gradient-to-br from-[#FF8C00] to-[#FFD700] rounded-full flex items-center justify-center">
+                    <div className="w-16 h-16 bg-gradient-to-br from-[#c28a32] to-[#FFD700] rounded-full flex items-center justify-center">
                       <IconComponent className="w-8 h-8 text-white" />
                     </div>
                   </motion.div>
@@ -114,8 +114,8 @@ export default function Services() {
                     {service.description}
                   </p>
 
-                  <motion.div 
-                    className="absolute inset-0 bg-gradient-to-br from-[#FF8C00]/10 to-[#FFD700]/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                                      <motion.div 
+                      className="absolute inset-0 bg-gradient-to-br from-[#c28a32]/10 to-[#FFD700]/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     initial={{ opacity: 0 }}
                     whileHover={{ opacity: 1 }}
                   />
@@ -133,7 +133,7 @@ export default function Services() {
           transition={{ duration: 0.8, delay: 0.5 }}
         >
           <motion.button 
-            className="btn-primary bg-gradient-to-r from-[#FF8C00] to-[#FFA500] hover:from-[#FFA500] hover:to-[#FF8C00] text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 relative overflow-hidden group"
+            className="btn-primary bg-gradient-to-r from-[#c28a32] to-[#FFA500] hover:from-[#FFA500] hover:to-[#c28a32] text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 relative overflow-hidden group"
             whileHover={{ 
               scale: 1.05,
               boxShadow: "0 20px 40px rgba(255, 140, 0, 0.3)"
@@ -142,7 +142,7 @@ export default function Services() {
           >
             <span className="relative z-10">Agendar Consultoria Gratuita</span>
             <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-[#FFD700] to-[#FF8C00]"
+              className="absolute inset-0 bg-gradient-to-r from-[#FFD700] to-[#c28a32]"
               initial={{ x: "-100%" }}
               whileHover={{ x: "0%" }}
               transition={{ duration: 0.3 }}

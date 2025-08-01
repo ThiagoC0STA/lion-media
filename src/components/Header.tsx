@@ -64,7 +64,7 @@ export default function Header() {
               Depoimentos
             </motion.a>
             <motion.button
-              className="bg-[#FF8C00] hover:bg-[#FFA500] text-white font-semibold py-2 px-6 rounded-lg transition-all duration-300"
+              className="bg-[#c28a32] hover:bg-[#FFA500] text-white font-semibold py-2 px-6 rounded-lg transition-all duration-300"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >

@@ -66,7 +66,7 @@ export default function Testimonials() {
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-[#FF8C00]/20 to-[#FFD700]/20 opacity-50"
+                  className="absolute inset-0 bg-gradient-to-r from-[#c28a32]/20 to-[#FFD700]/20 opacity-50"
                   animate={{
                     opacity: [0.3, 0.6, 0.3],
                   }}
@@ -106,7 +106,7 @@ export default function Testimonials() {
           </p>
 
           <motion.button
-            className="btn-primary bg-gradient-to-r from-[#FF8C00] to-[#FFA500] hover:from-[#FFA500] hover:to-[#FF8C00] text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 relative overflow-hidden group"
+            className="btn-primary bg-gradient-to-r from-[#c28a32] to-[#FFA500] hover:from-[#FFA500] hover:to-[#c28a32] text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 relative overflow-hidden group"
             whileHover={{
               scale: 1.05,
               boxShadow: "0 20px 40px rgba(255, 140, 0, 0.3)",
@@ -115,7 +115,7 @@ export default function Testimonials() {
           >
             <span className="relative z-10">Agendar Consulta Gratuita</span>
             <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-[#FFD700] to-[#FF8C00]"
+              className="absolute inset-0 bg-gradient-to-r from-[#FFD700] to-[#c28a32]"
               initial={{ x: "-100%" }}
               whileHover={{ x: "0%" }}
               transition={{ duration: 0.3 }}

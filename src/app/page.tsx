@@ -6,6 +6,7 @@ import AboutUs from '@/components/AboutUs'
 import Stats from '@/components/Stats'
 import Services from '@/components/Services'
 import Testimonials from '@/components/Testimonials'
+import FAQ from '@/components/FAQ'
 import CTA from '@/components/CTA'
 import Footer from '@/components/Footer'
 
@@ -50,6 +51,7 @@ export default function Home() {
       <Stats />
       <Services />
       <Testimonials />
+      <FAQ />
       <CTA />
       <Footer />
     </div>

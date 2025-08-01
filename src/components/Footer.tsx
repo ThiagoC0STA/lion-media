@@ -78,9 +78,9 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4">Contato</h4>
             <ul className="space-y-2">
-              <li className="text-gray-400">📧 contato@lionmedia.com</li>
-              <li className="text-gray-400">📱 +55 (11) 99999-9999</li>
-              <li className="text-gray-400">📍 São Paulo, SP</li>
+              <li className="text-gray-400">📧 comercial@lionmediadigital.com</li>
+              <li className="text-gray-400">📱 +55 41 991020364</li>
+              <li className="text-gray-400">📍 Itapema, SC</li>
             </ul>
           </div>
         </motion.div>

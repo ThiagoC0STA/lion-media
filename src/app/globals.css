@@ -126,7 +126,7 @@ html {
   left: 100%;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 1740px) {
   .swiper-button-prev {
     margin-left: 160px;
   }

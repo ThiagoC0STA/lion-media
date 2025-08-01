@@ -86,7 +86,7 @@ export default function Testimonials() {
 
         {/* Swiper */}
         <motion.div
-          className="max-w-4xl mx-auto mb-12"
+          className=" mx-auto mb-12"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -102,7 +102,7 @@ export default function Testimonials() {
                 spaceBetween: 20,
               },
               1024: {
-                slidesPerView: 2,
+                slidesPerView: 3,
                 spaceBetween: 30,
               },
             }}

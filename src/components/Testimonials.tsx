@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import Image from "next/image";
 
 // Import Swiper styles
 import "swiper/css";
@@ -18,6 +19,8 @@ export default function Testimonials() {
       text: "A Lion Media transformou completamente nosso negócio! Em apenas 30 dias, aumentamos nossas vendas em 400%. A equipe é incrível e os resultados superaram todas as expectativas.",
       rating: 5,
       result: "400% aumento em vendas",
+      image:
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
     },
     {
       name: "Maria Santos",
@@ -25,6 +28,8 @@ export default function Testimonials() {
       text: "Nunca imaginei que marketing digital pudesse ser tão eficaz. A Lion Media não só aumentou nossos clientes, mas também melhorou nossa imagem no mercado. Resultados impressionantes!",
       rating: 5,
       result: "300% mais clientes",
+      image:
+        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
     },
     {
       name: "Carlos Oliveira",
@@ -32,13 +37,26 @@ export default function Testimonials() {
       text: "Estávamos perdendo dinheiro com marketing tradicional. A Lion Media revolucionou nossa estratégia digital. Agora temos leads qualificados todos os dias e ROI positivo desde o primeiro mês.",
       rating: 5,
       result: "ROI de 300%",
+      image:
+        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
     },
     {
-      name: "Ana Costa",
-      company: "Consultoria Empresarial",
-      text: "A metodologia da Lion Media é simplesmente incrível. Eles entenderam perfeitamente nosso nicho e criaram campanhas que convertem. O suporte 24/7 faz toda a diferença!",
+      name: "Roberto Mendes",
+      company: "Tech Solutions",
+      text: "Como CEO de uma startup, precisava de resultados rápidos. A Lion Media entregou além das expectativas. Nossa conversão aumentou 250% no primeiro mês!",
       rating: 5,
-      result: "60% redução no CPA",
+      result: "250% aumento em conversões",
+      image:
+        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
+    },
+    {
+      name: "Fernanda Lima",
+      company: "Boutique Elegance",
+      text: "A equipe da Lion Media é excepcional! Eles entenderam nossa marca e criaram campanhas que realmente convertem. Nossas vendas online cresceram 180% em 2 meses.",
+      rating: 5,
+      result: "180% crescimento em vendas",
+      image:
+        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
     },
   ];
 
@@ -128,34 +146,41 @@ export default function Testimonials() {
               <SwiperSlide key={index}>
                 <motion.div
                   variants={itemVariants}
-                  className="bg-gradient-to-br from-gray-800 via-gray-900 to-gray-800 p-8 rounded-2xl border border-gray-700/50 h-96 flex flex-col items-center justify-center text-center relative overflow-hidden group hover:border-[#c28a32]/30 transition-all duration-300"
+                  className="bg-gradient-to-br from-gray-800 via-gray-900 to-gray-800 p-8 rounded-2xl border border-gray-700/50 h-[420px] flex flex-col items-center justify-center text-center relative overflow-hidden group hover:border-[#c28a32]/30 transition-all duration-300"
                 >
                   {/* Background Effect */}
                   <div className="absolute inset-0 bg-gradient-to-br from-[#c28a32]/5 to-[#FFD700]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                   {/* Testimonial Text */}
-                  <div className="mb-8 relative z-10 flex-1 flex items-center">
-                    <p className="text-gray-200 text-base leading-relaxed max-w-sm font-medium">
+                  <div className="mb-6 relative z-10 flex-1 flex items-center">
+                    <p className="text-gray-200 text-sm leading-relaxed max-w-sm font-medium">
                       "{testimonial.text}"
                     </p>
                   </div>
 
                   {/* Author Info */}
                   <div className="border-t border-gray-600/50 pt-6 w-full relative z-10">
-                    <h4 className="text-white font-bold text-lg mb-0">
-                      {testimonial.name}
-                    </h4>
-                    <p className="text-gray-400 text-sm mb-4 font-medium">
-                      {testimonial.company}
-                    </p>
-                  </div>
-                  <div className="flex justify-center mb-6 relative z-10">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className="w-5 h-5 text-[#c28a32] fill-current mx-1"
-                      />
-                    ))}
+                    <div className="flex items-center justify-start gap-4 mb-4">
+                      <div className="relative">
+                        <Image
+                          src={testimonial.image}
+                          alt={testimonial.name}
+                          width={60}
+                          height={60}
+                          className="w-12 h-12 rounded-full object-cover border-2 border-[#c28a32]/30"
+                        />
+                        <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white"></div>
+                      </div>
+                      <div className="text-start">
+                        <h4 className="text-white font-bold text-lg mb-0">
+                          {testimonial.name}
+                        </h4>
+                        <p className="text-gray-400 text-sm font-medium">
+                          {testimonial.company}
+                        </p>
+                      </div>
+                    </div>
+
                   </div>
 
                   {/* Hover Effect */}

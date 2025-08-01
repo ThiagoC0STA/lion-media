@@ -150,7 +150,7 @@ export default function Services() {
           </motion.button>
           
           <p className="text-gray-400 text-sm mt-4">
-            ⚡ Consultoria gratuita de 30 minutos - Sem compromisso
+            ⚡ Consultoria gratuita - Sem compromisso
           </p>
         </motion.div>
       </div>

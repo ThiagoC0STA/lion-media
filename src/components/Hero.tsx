@@ -118,7 +118,7 @@ export default function Hero() {
                 >
                   50+
                 </motion.div>
-                <div className="text-gray-400 text-sm">Clientes Satisfeitos</div>
+                <div className="text-gray-400 text-sm">Clientes</div>
               </div>
               <div className="text-center">
                 <motion.div

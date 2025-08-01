@@ -94,7 +94,7 @@ export default function Footer() {
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            Copyright © 2023. Desenvolvido por Lion Media Digital. Todos os direitos reservados.
+            Copyright © 2025. Desenvolvido por Lion Media Digital. Todos os direitos reservados.
           </p>
           
           <div className="flex gap-6 text-sm">

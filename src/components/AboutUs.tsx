@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { BarChart3, Palette, Users, TrendingUp } from 'lucide-react';
+import { BarChart3, Palette, Users, TrendingUp, Megaphone, Check } from 'lucide-react';
 
 export default function AboutUs() {
   const containerVariants = {
@@ -45,8 +45,8 @@ export default function AboutUs() {
       description: "Analisamos mais de 50 métricas para otimizar suas campanhas"
     },
     {
-      icon: Palette,
-      title: "Criativos com alta retenção",
+      icon: Megaphone,
+      title: "Anuncios com alta retenção",
       description: "Design que converte com taxas de engajamento superiores a 300%"
     },
     {
@@ -116,7 +116,6 @@ export default function AboutUs() {
               <div className="flex items-center justify-start gap-8">
                 <motion.div
                   className="bg-white/80 p-4 rounded-lg"
-                  whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <Image
@@ -129,7 +128,6 @@ export default function AboutUs() {
                 </motion.div>
                 <motion.div
                   className="bg-white/80 p-4 rounded-lg"
-                  whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <Image
@@ -150,7 +148,8 @@ export default function AboutUs() {
             variants={containerVariants}
           >
             {features.map((feature, index) => {
-              const IconComponent = feature.icon;
+              const IconComponent = Check;
+
               return (
                 <motion.div 
                   key={index}
@@ -160,7 +159,7 @@ export default function AboutUs() {
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <motion.div 
-                    className="w-12 h-12 bg-gradient-to-br from-[#c28a32] to-[#FFD700] rounded-full flex items-center justify-center"
+                    className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center"
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >

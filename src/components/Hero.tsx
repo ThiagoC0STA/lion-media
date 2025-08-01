@@ -145,8 +145,11 @@ export default function Hero() {
             </motion.div>
 
             {/* CTA Button */}
-            <motion.button
-              className="btn-primary bg-[#c28a32] hover:bg-[#FFA500] text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 relative overflow-hidden group"
+            <motion.a
+              href="http://wa.me/5541991020364"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary bg-[#c28a32] hover:bg-[#FFA500] text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 relative overflow-hidden group inline-block text-center"
               variants={itemVariants}
               whileHover={{
                 scale: 1.05,
@@ -161,7 +164,7 @@ export default function Hero() {
                 whileHover={{ x: "0%" }}
                 transition={{ duration: 0.3 }}
               />
-            </motion.button>
+            </motion.a>
           </motion.div>
 
           {/* Right Content - Laptop */}

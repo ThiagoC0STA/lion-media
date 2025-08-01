@@ -63,13 +63,16 @@ export default function Header() {
             >
               Depoimentos
             </motion.a>
-            <motion.button
-              className="bg-[#c28a32] hover:bg-[#FFA500] text-white font-semibold py-2 px-6 rounded-lg transition-all duration-300"
+            <motion.a
+              href="http://wa.me/5541991020364"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#c28a32] hover:bg-[#FFA500] text-white font-semibold py-2 px-6 rounded-lg transition-all duration-300 inline-block"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
               Fale Conosco
-            </motion.button>
+            </motion.a>
           </motion.nav>
 
           <motion.button

@@ -132,8 +132,11 @@ export default function Services() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, delay: 0.5 }}
         >
-          <motion.button 
-            className="btn-primary bg-gradient-to-r from-[#c28a32] to-[#FFA500] hover:from-[#FFA500] hover:to-[#c28a32] text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 relative overflow-hidden group"
+          <motion.a 
+            href="http://wa.me/5541991020364"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary bg-gradient-to-r from-[#c28a32] to-[#FFA500] hover:from-[#FFA500] hover:to-[#c28a32] text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 relative overflow-hidden group inline-block text-center"
             whileHover={{ 
               scale: 1.05,
               boxShadow: "0 20px 40px rgba(255, 140, 0, 0.3)"
@@ -147,7 +150,7 @@ export default function Services() {
               whileHover={{ x: "0%" }}
               transition={{ duration: 0.3 }}
             />
-          </motion.button>
+          </motion.a>
           
           <p className="text-gray-400 text-sm mt-4">
             ⚡ Consultoria gratuita - Sem compromisso

@@ -115,8 +115,11 @@ export default function CTA() {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="space-y-4"
           >
-            <motion.button 
-              className="bg-gradient-to-r from-[#c28a32] to-[#FFA500] hover:from-[#FFA500] hover:to-[#c28a32] text-white font-bold py-6 px-12 rounded-lg text-xl transition-all duration-300 relative overflow-hidden group w-full sm:w-auto"
+            <motion.a 
+              href="http://wa.me/5541991020364"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gradient-to-r from-[#c28a32] to-[#FFA500] hover:from-[#FFA500] hover:to-[#c28a32] text-white font-bold py-6 px-12 rounded-lg text-xl transition-all duration-300 relative overflow-hidden group w-full sm:w-auto inline-block text-center"
               whileHover={{ 
                 scale: 1.05,
               }}
@@ -129,7 +132,7 @@ export default function CTA() {
                 whileHover={{ x: "0%" }}
                 transition={{ duration: 0.3 }}
               />
-            </motion.button>
+            </motion.a>
 
             <motion.p 
               className="text-gray-400 text-sm"

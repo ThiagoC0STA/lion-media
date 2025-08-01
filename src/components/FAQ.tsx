@@ -197,8 +197,11 @@ export default function FAQ() {
           <p className="text-gray-300 mb-6">
             Ainda tem dúvidas? Nossa equipe está pronta para ajudar!
           </p>
-          <motion.button
-            className="bg-gradient-to-r from-[#c28a32] to-[#FFA500] hover:from-[#FFA500] hover:to-[#c28a32] text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 relative overflow-hidden group"
+          <motion.a
+            href="http://wa.me/5541991020364"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gradient-to-r from-[#c28a32] to-[#FFA500] hover:from-[#FFA500] hover:to-[#c28a32] text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 relative overflow-hidden group inline-block text-center"
             whileHover={{
               scale: 1.05,
               boxShadow: "0 20px 40px rgba(194, 138, 50, 0.3)",
@@ -212,7 +215,7 @@ export default function FAQ() {
               whileHover={{ x: "0%" }}
               transition={{ duration: 0.3 }}
             />
-          </motion.button>
+          </motion.a>
         </motion.div>
       </div>
     </section>

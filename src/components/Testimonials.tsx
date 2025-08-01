@@ -65,7 +65,10 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="depoimentos" className="py-20 px-4 sm:px-8 lg:px-16 bg-black">
+    <section
+      id="depoimentos"
+      className="py-20 px-4 sm:px-8 lg:px-16 bg-black relative"
+    >
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -186,8 +189,11 @@ export default function Testimonials() {
             sem compromisso abaixo
           </p>
 
-          <motion.button
-            className="btn-primary bg-gradient-to-r from-[#c28a32] to-[#FFA500] hover:from-[#FFA500] hover:to-[#c28a32] text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 relative overflow-hidden group"
+          <motion.a
+            href="http://wa.me/5541991020364"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary bg-gradient-to-r from-[#c28a32] to-[#FFA500] hover:from-[#FFA500] hover:to-[#c28a32] text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 relative overflow-hidden group inline-block text-center"
             whileHover={{
               scale: 1.05,
               boxShadow: "0 20px 40px rgba(194, 138, 50, 0.3)",
@@ -201,7 +207,7 @@ export default function Testimonials() {
               whileHover={{ x: "0%" }}
               transition={{ duration: 0.3 }}
             />
-          </motion.button>
+          </motion.a>
         </motion.div>
       </div>
 
@@ -256,7 +262,8 @@ export default function Testimonials() {
         @media (max-width: 640px) {
           .swiper-button-prev,
           .swiper-button-next {
-            display: none;
+            display: none !important;
+            opacity: 0;
           }
 
           .testimonials-swiper {

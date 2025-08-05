@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Star, Quote } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import Image from "next/image";
@@ -154,7 +153,7 @@ export default function Testimonials() {
                   {/* Testimonial Text */}
                   <div className="mb-6 relative z-10 flex-1 flex items-center">
                     <p className="text-gray-200 text-sm leading-relaxed max-w-sm font-medium">
-                      "{testimonial.text}"
+                      &quot;{testimonial.text}&quot;
                     </p>
                   </div>
 
@@ -180,7 +179,6 @@ export default function Testimonials() {
                         </p>
                       </div>
                     </div>
-
                   </div>
 
                   {/* Hover Effect */}

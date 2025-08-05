@@ -57,6 +57,7 @@ export default function GlobalBrands() {
                 alt="Mansory"
                 width={150}
                 height={80}
+                quality={100}
                 className="h-16 w-auto"
               />
             </motion.div>
@@ -71,6 +72,7 @@ export default function GlobalBrands() {
                 alt="HTEAM SEAS"
                 width={150}
                 height={80}
+                quality={100}
                 className="h-16 w-auto"
               />
             </motion.div>
@@ -85,6 +87,7 @@ export default function GlobalBrands() {
                 alt="Fyde"
                 width={150}
                 height={80}
+                quality={100}
                 className="h-16 w-auto"
               />
             </motion.div>

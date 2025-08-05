@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { BarChart3, Palette, Users, TrendingUp, Megaphone, Check } from 'lucide-react';
+import { BarChart3, Users, TrendingUp, Megaphone, Check } from 'lucide-react';
 
 export default function AboutUs() {
   const containerVariants = {

@@ -13,49 +13,44 @@ import "swiper/css/pagination";
 export default function Testimonials() {
   const testimonials = [
     {
-      name: "João Silva",
-      company: "Restaurante Sabor & Arte",
-      text: "A Lion Media transformou completamente nosso negócio! Em apenas 30 dias, aumentamos nossas vendas em 400%. A equipe é incrível e os resultados superaram todas as expectativas.",
+      name: "Dominique Columbus",
+      company: "Ator de Hollywood & Produtor",
+      text: "A Lion Media cuidou do meu marketing como se fosse deles. Em pouco tempo, meu nome começou a aparecer para o público certo e os resultados foram incríveis. Recomendo de olhos fechados.",
       rating: 5,
-      result: "400% aumento em vendas",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+      result: "Resultados Incríveis",
+      image: "/depoimentos/DOMINIQUE COLUMBUS.webp",
     },
     {
-      name: "Maria Santos",
-      company: "Clínica Estética Bella",
-      text: "Nunca imaginei que marketing digital pudesse ser tão eficaz. A Lion Media não só aumentou nossos clientes, mas também melhorou nossa imagem no mercado. Resultados impressionantes!",
+      name: "Mercedes-Benz Mansory",
+      company: "Luxury Auto Dealer",
+      text: "Trabalhar com a Lion Media foi um divisor de águas. As campanhas que eles criaram trouxeram clientes realmente interessados e aumentaram nossas vendas de forma visível. Uma parceria que vale cada centavo.",
       rating: 5,
-      result: "300% mais clientes",
-      image:
-        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
+      result: "Divisor de Águas",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
     },
     {
-      name: "Carlos Oliveira",
-      company: "Auto Peças Express",
-      text: "Estávamos perdendo dinheiro com marketing tradicional. A Lion Media revolucionou nossa estratégia digital. Agora temos leads qualificados todos os dias e ROI positivo desde o primeiro mês.",
+      name: "Mark Rober",
+      company: "Co-Fundador Team Seas",
+      text: "A equipe entendeu nossa causa e transformou isso em campanhas que emocionaram e engajaram milhares de pessoas. Ver nosso alcance crescer e mais gente apoiando foi algo especial.",
       rating: 5,
-      result: "ROI de 300%",
-      image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      result: "Milhares Engajados",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
     },
     {
-      name: "Roberto Mendes",
-      company: "Tech Solutions",
-      text: "Como CEO de uma startup, precisava de resultados rápidos. A Lion Media entregou além das expectativas. Nossa conversão aumentou 250% no primeiro mês!",
+      name: "Ethan Williams",
+      company: "Empreendedor & Investidor",
+      text: "Antes da Lion Media, eu gastava com anúncios sem ver retorno. Eles entraram, ajustaram tudo e hoje recebo contatos todos os dias de clientes qualificados. Estou mais do que satisfeito.",
       rating: 5,
-      result: "250% aumento em conversões",
-      image:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
+      result: "Clientes Qualificados",
+      image: "/depoimentos/Ethan Williams.jpeg",
     },
     {
-      name: "Fernanda Lima",
-      company: "Boutique Elegance",
-      text: "A equipe da Lion Media é excepcional! Eles entenderam nossa marca e criaram campanhas que realmente convertem. Nossas vendas online cresceram 180% em 2 meses.",
+      name: "Callum",
+      company: "Mastery Motiv - Empreendedor & Criador de Conteúdo Digital",
+      text: "Eu precisava alcançar mais público para meus produtos e a Lion Media fez isso possível. Atingimos mais de 100 milhões de views em um curto período de tempo, um resultado muito acima do esperado. Fechei novas parcerias e sinto que minha marca está cada vez mais forte.",
       rating: 5,
-      result: "180% crescimento em vendas",
-      image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+      result: "100M+ Views",
+      image: "/depoimentos/Callum.png",
     },
   ];
 
@@ -160,14 +155,16 @@ export default function Testimonials() {
                   {/* Author Info */}
                   <div className="border-t border-gray-600/50 pt-6 w-full relative z-10">
                     <div className="flex items-center justify-start gap-4 mb-4">
-                      <div className="relative">
-                        <Image
-                          src={testimonial.image}
-                          alt={testimonial.name}
-                          width={60}
-                          height={60}
-                          className="w-12 h-12 rounded-full object-cover border-2 border-[#c28a32]/30"
-                        />
+                      <div className="relative w-12 h-12">
+                        <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-[#c28a32]/30 flex-shrink-0">
+                          <Image
+                            src={testimonial.image}
+                            alt={testimonial.name}
+                            width={48}
+                            height={48}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
                         <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white"></div>
                       </div>
                       <div className="text-start">
@@ -281,6 +278,8 @@ export default function Testimonials() {
         .swiper-slide {
           height: auto;
         }
+
+
 
         @media (max-width: 640px) {
           .swiper-button-prev,

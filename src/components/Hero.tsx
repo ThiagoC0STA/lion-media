@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Hero() {
   const containerVariants = {
@@ -166,25 +167,24 @@ export default function Hero() {
             </motion.a>
           </motion.div>
 
-          {/* Right Content - Laptop */}
+          {/* Right Content - Imagem Principal */}
           <motion.div
             className="flex-1 flex justify-center lg:justify-end"
             variants={itemVariants}
           >
             <motion.div
-              className="w-full max-w-md lg:max-w-lg h-64 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg border border-gray-700 flex items-center justify-center relative overflow-hidden"
+              className="relative w-full h-120 rounded-lg overflow-hidden"
               animate={floatingAnimation}
               whileHover={{ scale: 1.05 }}
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-[#c28a32]/20 to-[#FFD700]/20 opacity-50" />
-              <div className="relative z-10 text-gray-400 text-lg font-semibold">
-                Dashboard de Resultados
-              </div>
-              <motion.div
-                className="absolute top-4 right-4 w-3 h-3 bg-green-500 rounded-full"
-                animate={{ opacity: [0.5, 1, 0.5] }}
-                transition={{ duration: 2, repeat: Infinity }}
+              <Image
+                src="/results.png"
+                alt="Lion Media - Resultados e Sucesso"
+                fill
+                className="object-cover rounded-lg"
+                priority
               />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#c28a32]/10 to-[#FFD700]/10 opacity-30" />
             </motion.div>
           </motion.div>
         </motion.div>

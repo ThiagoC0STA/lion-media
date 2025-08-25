@@ -137,14 +137,6 @@ export default function CTA() {
               />
             </motion.a>
 
-            <motion.p
-              className="text-gray-400 text-sm"
-              animate={{ opacity: [0.5, 1, 0.5] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            >
-              ⏰ Apenas 5 vagas disponíveis esta semana - Agende agora!
-            </motion.p>
-
             <div className="flex justify-center items-center gap-4 text-sm text-gray-400">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>

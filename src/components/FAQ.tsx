@@ -18,46 +18,66 @@ export default function FAQ() {
     {
       question: "Como vocês conseguem resultados tão rápido?",
       answer:
-        "Nossa metodologia comprovada já transformou mais de 50 empresas. Começamos com uma análise completa do seu negócio, identificamos as oportunidades de crescimento e implementamos campanhas otimizadas desde o primeiro dia. Nossos clientes veem os primeiros resultados em 7-15 dias.",
+        "Nossa metodologia comprovada já transformou mais de 50 empresas. Começamos com uma análise completa do seu negócio, e do seu mercado, identificamos as oportunidades de crescimento e estudamos seus maiores concorrentes, assim implementamos campanhas otimizadas desde o primeiro dia. Nossos clientes veem os primeiros resultados em 15-30 dias.",
       icon: CheckCircle,
-      highlight: "Resultados em 7-15 dias",
-    },
-    {
-      question: "E se não funcionar? Vocês devolvem o dinheiro?",
-      answer:
-        "Sim! Oferecemos garantia de 30 dias. Se você não estiver satisfeito com os resultados ou não atingir as metas estabelecidas, devolvemos 100% do investimento. Nossa confiança no trabalho é tanta que assumimos o risco por você.",
-      icon: DollarSign,
-      highlight: "Garantia de 30 dias",
-    },
-    {
-      question: "Quanto tempo leva para começar a ver resultados?",
-      answer:
-        "Depende do seu nicho e objetivos, mas nossos clientes começam a ver resultados entre 7-15 dias. Alguns veem leads qualificados na primeira semana. O importante é que trabalhamos com metas claras e você acompanha tudo em tempo real.",
-      icon: Clock,
-      highlight: "Primeiros resultados em 7-15 dias",
+      highlight: "Resultados em 15-30 dias",
     },
     {
       question: "Vocês trabalham com qualquer tipo de negócio?",
       answer:
         "Sim! Já atendemos desde pequenas empresas locais até grandes marcas em 4 países. Nossa metodologia é adaptável a qualquer nicho. O que importa é que você tenha um produto/serviço de qualidade e esteja disposto a investir em crescimento.",
       icon: Target,
-      highlight: "Atendemos qualquer nicho",
+      highlight: "Atendemos multiplos nicho",
     },
     {
       question: "Como funciona o acompanhamento e suporte?",
       answer:
-        "Você terá acesso direto à nossa equipe via WhatsApp, email e reuniões semanais. Além disso, fornecemos relatórios detalhados e dashboards em tempo real. Nosso suporte é 24/7 para emergências e sempre respondemos em até 2 horas.",
+        "Você terá acesso direto à nossa equipe via WhatsApp, email e reuniões semanais. Além disso, fornecemos relatórios detalhados e dashboards em tempo real. Nosso suporte é 24/7 para solucionar todos os seus problemas.",
       icon: CheckCircle,
       highlight: "Suporte 24/7",
     },
     {
       question: "Qual o investimento necessário para começar?",
       answer:
-        "Temos planos flexíveis que se adaptam ao seu orçamento. O investimento varia conforme seus objetivos, mas começamos com consultorias gratuitas para entender suas necessidades. O importante é que você tenha um orçamento mínimo para investir em publicidade.",
+        "Nossos planos são flexíveis e adaptados ao porte do seu negócio, mas começamos com consultorias gratuitas para entender suas necessidades.O importante é que você tenha clareza de onde está investindo e do potencial de retorno.",
       icon: DollarSign,
       highlight: "Planos flexíveis",
     },
+    {
+      question:
+        "Como sei que meu negócio não vai ficar perdido em meio a tantos clientes de vocês?",
+      answer:
+        "Diferente de agências que atendem em massa, na Lion Media priorizamos atendimento personalizados, entendendo cada detalhe do seu negócio antes de criar as campanhas e dando o devido suporte ao cliente 100%.",
+      icon: CheckCircle,
+      highlight: "Serviços Personalizados",
+    },
+    {
+      question: "Preciso assinar contrato de longo prazo?",
+      answer:
+        "Não exigimos contratos amarrados.Você pode começar com um plano mensal e continuar apenas se estiver satisfeito com os resultados.",
+      icon: DollarSign,
+      highlight: "Contratos de acordo com sua necessidade",
+    },
+    {
+      question: "Vocês só fazem anúncios ou cuidam também das redes sociais?",
+      answer:
+        "Além da gestão de tráfego pago (Facebook Ads e Google Ads), também oferecemos gestão de social media, criação de conteúdo, envolvendo conteudo em imagem e video para fortalecer sua marca online.",
+      icon: CheckCircle,
+      highlight: "Serviços de Social Media",
+    },
+    {
+      question:
+        "Eu já tentei anúncios antes e não tive retorno. Por que agora seria diferente?",
+      answer:
+        "Muitos negócios investem em anúncios sem estratégia. Aqui na Lion Media, usamos segmentação avançada, criativos de alta performance e funis de conversão, o que garante muito mais chances de sucesso.",
+      icon: CheckCircle,
+      highlight: "Estratégia Comprovada",
+    },
   ];
+
+  // Debug: Log dos FAQs
+  console.log("FAQs array:", faqs);
+  console.log("openIndex:", openIndex);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -116,7 +136,6 @@ export default function FAQ() {
                 key={index}
                 className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl border border-gray-700 overflow-hidden"
                 variants={itemVariants}
-
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <button
@@ -129,7 +148,7 @@ export default function FAQ() {
                     </div>
                     <div>
                       <h4 className="text-lg font-semibold text-white mb-1">
-                        {faq.question}
+                        {faq.question} {/* Index: {index} */}
                       </h4>
                       <div className="flex items-center gap-2">
                         <span className="text-sm font-medium text-[#c28a32]">
@@ -161,7 +180,7 @@ export default function FAQ() {
                 >
                   <div className="px-6 pb-6">
                     <p className="text-gray-300 leading-relaxed">
-                      {faq.answer}
+                      {faq.answer} {/* FAQ {index} */}
                     </p>
 
                     {isOpen && (
@@ -197,25 +216,50 @@ export default function FAQ() {
           <p className="text-gray-300 mb-6">
             Ainda tem dúvidas? Nossa equipe está pronta para ajudar!
           </p>
-          <motion.a
-            href="http://wa.me/5541991020364"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-gradient-to-r from-[#c28a32] to-[#FFA500] hover:from-[#FFA500] hover:to-[#c28a32] text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 relative overflow-hidden group inline-block text-center"
-            whileHover={{
-              scale: 1.05,
-              boxShadow: "0 20px 40px rgba(194, 138, 50, 0.3)",
-            }}
-            whileTap={{ scale: 0.95 }}
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="space-y-4"
           >
-            <span className="relative z-10">Falar com Especialista</span>
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-[#FFD700] to-[#c28a32]"
-              initial={{ x: "-100%" }}
-              whileHover={{ x: "0%" }}
-              transition={{ duration: 0.3 }}
-            />
-          </motion.a>
+            <motion.a
+              href="http://wa.me/5541991020364"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gradient-to-r from-[#c28a32] to-[#FFA500] hover:from-[#FFA500] hover:to-[#c28a32] text-white font-bold py-6 px-12 rounded-lg text-xl transition-all duration-300 relative overflow-hidden group w-full sm:w-auto inline-block text-center"
+              whileHover={{
+                scale: 1.05,
+              }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <span className="relative z-10">
+                AGENDAR CONSULTORIA GRATUITA AGORA
+              </span>
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-[#FFD700] to-[#c28a32]"
+                initial={{ x: "-100%" }}
+                whileHover={{ x: "0%" }}
+                transition={{ duration: 0.3 }}
+              />
+            </motion.a>
+
+            <div className="flex justify-center items-center gap-4 text-sm text-gray-400">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                Consultoria 100% gratuita
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                Sem compromisso
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                Resultados em 30 dias
+              </div>
+            </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>

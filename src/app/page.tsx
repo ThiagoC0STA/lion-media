@@ -7,7 +7,6 @@ import Stats from "@/components/Stats";
 import Services from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
-import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
@@ -59,7 +58,7 @@ export default function Home() {
       <Services />
       <Testimonials />
       <FAQ />
-      <CTA />
+      {/* <CTA /> */}
       <Footer />
     </div>
   );

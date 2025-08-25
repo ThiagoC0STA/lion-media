@@ -12,7 +12,7 @@ export default function Stats() {
       icon: Users,
     },
     {
-      number: 30,
+      number: 38,
       suffix: "%",
       label: "Aumento em Vendas",
       icon: DollarSign,
@@ -20,7 +20,7 @@ export default function Stats() {
     {
       number: 4,
       suffix: "",
-      label: "Países",
+      label: "Continentes",
       icon: Globe,
     },
     {

@@ -37,8 +37,8 @@ export default function Footer() {
             </motion.div>
 
             <p className="text-gray-300 mb-6 max-w-md">
-              Especialistas em marketing digital que transformam pequenas
-              empresas em grandes marcas. Resultados comprovados em 4
+              Lion Media — Especialistas em marketing digital que transformam
+              pequenas empresas em grandes marcas. Resultados comprovados em 4
               continentes.
             </p>
 
@@ -83,7 +83,7 @@ export default function Footer() {
               <li className="text-gray-400">
                 📧 comercial@lionmediadigital.com
               </li>
-              <li className="text-gray-400">📱 +55 41 991020364</li>
+              <li className="text-gray-400">📱 +55 41 99102-0364</li>
               <li className="text-gray-400">📍 Itapema, SC</li>
             </ul>
           </div>

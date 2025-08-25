@@ -29,28 +29,28 @@ export default function Services() {
   const services = [
     {
       icon: DollarSign,
-      title: "Estão cansados de gastar dinheiro com marketing e não ver resultado algum?",
+      title: "Estão cansadas de gastar dinheiro com marketing e não ver resultado algum",
       description: "Transformamos desperdício em investimento com estratégias que geram ROI real"
     },
     {
       icon: TrendingUp,
-      title: "Querem aumentar suas vendas e ver resultados reais no marketing?",
+      title: "Querem aumentar suas vendas e ver resultados reais no marketing",
       description: "Campanhas que convertem visitantes em clientes pagantes"
     },
     {
       icon: Target,
-      title: "Precisam de uma estratégia clara e bem definida para seus negócios?",
+      title: "Precisam de uma estratégia clara e bem definida para seus negócios",
       description: "Planejamento estratégico que alinha marketing com objetivos de negócio"
     },
     {
       icon: Users,
-      title: "Desejam que o marketing seja direcionado para o cliente que tem desejo de verdade pelo seu produto ou serviço?",
+      title: "Desejam que o marketing seja direcionado para o cliente que tem desejo de verdade pelo seu produto ou serviço",
       description: "Segmentação avançada que atinge o público certo no momento certo"
     },
     {
       icon: Handshake,
-      title: "Buscam resultados constantes mensais e escalar suas vendas usando tráfego pago?",
-      description: "Crescimento sustentável com campanhas otimizadas para escala"
+      title: "Buscam resultados constantes mensais e escalar suas vendas mesmo fora da temporada usando tráfego pago",
+      description: "Crescimento sustentável e consistente com campanhas otimizadas para escala"
     },
     {
       icon: Lightbulb,
@@ -70,7 +70,7 @@ export default function Services() {
           className="text-center mb-16"
         >
           <h3 className="text-3xl sm:text-4xl font-bold mb-6 text-white">
-            nossos serviços são para empresas que:
+            Nossos serviços são para empresas que:
           </h3>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
             Identificamos os desafios mais comuns que impedem o crescimento do seu negócio 

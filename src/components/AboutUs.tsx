@@ -42,12 +42,12 @@ export default function AboutUs() {
     {
       icon: BarChart3,
       title: "Estratégia baseada em dados reais",
-      description: "Analisamos mais de 50 métricas para otimizar suas campanhas"
+      description: "Analisamos mais de 30 métricas diferentes para otimizar suas campanhas"
     },
     {
       icon: Megaphone,
-      title: "Anuncios com alta retenção",
-      description: "Design que converte com taxas de engajamento superiores a 300%"
+      title: "Anúncios com alta retenção",
+      description: "Design que converte com taxas de engajamento superiores a 60%"
     },
     {
       icon: Users,
@@ -56,7 +56,7 @@ export default function AboutUs() {
     },
     {
       icon: TrendingUp,
-      title: "Acompanhamento diário",
+      title: "Acompanhamento diário e relatórios semanais",
       description: "Relatórios detalhados e ajustes em tempo real"
     }
   ];
@@ -88,9 +88,9 @@ export default function AboutUs() {
               variants={itemVariants}
             >
               Somos uma agência de marketing digital que revolucionou a forma como empresas 
-              escalam seus negócios online. Atuamos em 4 continentes sendo eles America, 
-              Europa, Asia e Oceania, entregando campanhas de alto impacto com foco em 
-              resultados reais. Unimos Mídia paga, branding e marketing estratégico.
+              escalam seus negócios online. Atuamos em 4 continentes sendo eles América, 
+              Europa, Ásia e Oceania, entregando campanhas de alto impacto com foco em 
+              resultados reais. Unimos mídia paga, branding e marketing estratégico.
             </motion.p>
 
             <motion.div 
@@ -112,32 +112,16 @@ export default function AboutUs() {
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <h4 className="text-xl font-semibold text-white mb-4">Parceiros Oficiais</h4>
-              <div className="flex items-center justify-start gap-8">
-                <motion.div
-                  className="bg-white/80 p-4 rounded-lg"
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <Image
-                    src="/google.png"
-                    alt="Google Partner"
-                    width={120}
-                    height={50}
-                    className="h-10 w-auto"
-                  />
-                </motion.div>
-                <motion.div
-                  className="bg-white/80 p-4 rounded-lg"
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <Image
-                    src="/meta.png"
-                    alt="Meta Business Partner"
-                    width={120}
-                    height={50}
-                    className="h-10 w-auto"
-                  />
-                </motion.div>
+              <h4 className="text-xl font-semibold text-white mb-4">Parcerias Oficiais</h4>
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-3 h-3 bg-[#c28a32] rounded-full"></div>
+                  <span className="text-white font-medium">Google Partner</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-3 h-3 bg-[#c28a32] rounded-full"></div>
+                  <span className="text-white font-medium">Meta Certified Company</span>
+                </div>
               </div>
             </motion.div>
           </motion.div>
@@ -188,7 +172,7 @@ export default function AboutUs() {
               </h4>
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div>
-                  <div className="text-2xl font-bold text-[#c28a32]">300%</div>
+                  <div className="text-2xl font-bold text-[#c28a32]">60%</div>
                   <div className="text-gray-400">Aumento médio em conversões</div>
                 </div>
                 <div>

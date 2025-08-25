@@ -1,8 +1,8 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { ArrowLeft } from 'lucide-react';
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
 
 export default function PoliticaPrivacidade() {
   return (
@@ -15,7 +15,7 @@ export default function PoliticaPrivacidade() {
         className="bg-black/80 backdrop-blur-md border-b border-gray-800"
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-8 lg:px-16 py-4">
-          <Link 
+          <Link
             href="/"
             className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
           >
@@ -48,7 +48,8 @@ export default function PoliticaPrivacidade() {
                 1. Informações que Coletamos
               </h2>
               <p className="mb-4">
-                A Lion Media Digital coleta informações que você nos fornece diretamente, como quando:
+                A Lion Media Digital coleta informações que você nos fornece
+                diretamente, como quando:
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>Preenche formulários em nosso site</li>
@@ -62,11 +63,11 @@ export default function PoliticaPrivacidade() {
               <h2 className="text-2xl font-semibold text-white mb-4">
                 2. Como Usamos Suas Informações
               </h2>
-              <p className="mb-4">
-                Utilizamos suas informações para:
-              </p>
+              <p className="mb-4">Utilizamos suas informações para:</p>
               <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>Fornecer e melhorar nossos serviços de marketing digital</li>
+                <li>
+                  Fornecer e melhorar nossos serviços de marketing digital
+                </li>
                 <li>Comunicar sobre consultorias e propostas</li>
                 <li>Enviar informações relevantes sobre marketing digital</li>
                 <li>Processar pagamentos e emitir notas fiscais</li>
@@ -79,8 +80,9 @@ export default function PoliticaPrivacidade() {
                 3. Compartilhamento de Informações
               </h2>
               <p>
-                Não vendemos, alugamos ou compartilhamos suas informações pessoais com terceiros, 
-                exceto quando necessário para prestar nossos serviços ou quando exigido por lei.
+                Não vendemos, alugamos ou compartilhamos suas informações
+                pessoais com terceiros, exceto quando necessário para prestar
+                nossos serviços ou quando exigido por lei.
               </p>
             </section>
 
@@ -89,8 +91,9 @@ export default function PoliticaPrivacidade() {
                 4. Segurança dos Dados
               </h2>
               <p>
-                Implementamos medidas de segurança técnicas e organizacionais para proteger 
-                suas informações contra acesso não autorizado, alteração, divulgação ou destruição.
+                Implementamos medidas de segurança técnicas e organizacionais
+                para proteger suas informações contra acesso não autorizado,
+                alteração, divulgação ou destruição.
               </p>
             </section>
 
@@ -98,9 +101,7 @@ export default function PoliticaPrivacidade() {
               <h2 className="text-2xl font-semibold text-white mb-4">
                 5. Seus Direitos
               </h2>
-              <p className="mb-4">
-                Você tem o direito de:
-              </p>
+              <p className="mb-4">Você tem o direito de:</p>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>Acessar suas informações pessoais</li>
                 <li>Corrigir dados imprecisos</li>
@@ -115,9 +116,10 @@ export default function PoliticaPrivacidade() {
                 6. Cookies e Tecnologias Similares
               </h2>
               <p>
-                Utilizamos cookies e tecnologias similares para melhorar a experiência em nosso site, 
-                analisar o tráfego e personalizar conteúdo. Você pode gerenciar suas preferências 
-                de cookies através das configurações do seu navegador.
+                Utilizamos cookies e tecnologias similares para melhorar a
+                experiência em nosso site, analisar o tráfego e personalizar
+                conteúdo. Você pode gerenciar suas preferências de cookies
+                através das configurações do seu navegador.
               </p>
             </section>
 
@@ -126,9 +128,9 @@ export default function PoliticaPrivacidade() {
                 7. Retenção de Dados
               </h2>
               <p>
-                Mantemos suas informações pelo tempo necessário para cumprir os propósitos 
-                descritos nesta política, a menos que uma retenção mais longa seja exigida 
-                ou permitida por lei.
+                Mantemos suas informações pelo tempo necessário para cumprir os
+                propósitos descritos nesta política, a menos que uma retenção
+                mais longa seja exigida ou permitida por lei.
               </p>
             </section>
 
@@ -137,8 +139,9 @@ export default function PoliticaPrivacidade() {
                 8. Alterações nesta Política
               </h2>
               <p>
-                Podemos atualizar esta política periodicamente. Notificaremos sobre mudanças 
-                significativas através de nosso site ou contato direto.
+                Podemos atualizar esta política periodicamente. Notificaremos
+                sobre mudanças significativas através de nosso site ou contato
+                direto.
               </p>
             </section>
 
@@ -147,7 +150,8 @@ export default function PoliticaPrivacidade() {
                 9. Contato
               </h2>
               <p>
-                Para dúvidas sobre esta política ou exercer seus direitos, entre em contato:
+                Para dúvidas sobre esta política ou exercer seus direitos, entre
+                em contato:
               </p>
               <div className="mt-4 space-y-2">
                 <p>📧 Email: comercial@lionmediadigital.com</p>
@@ -160,4 +164,4 @@ export default function PoliticaPrivacidade() {
       </div>
     </div>
   );
-} 
+}

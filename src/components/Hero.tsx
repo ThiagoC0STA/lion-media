@@ -64,16 +64,16 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto w-full relative z-10">
         <motion.div
-          className="flex flex-col lg:flex-row items-center justify-between gap-12"
+          className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
           {/* Left Content */}
-          <motion.div className="flex-1 space-y-8" variants={itemVariants}>
+          <motion.div className="flex-1 space-y-6 lg:space-y-8" variants={itemVariants}>
             {/* Main Headline */}
             <motion.h2
-              className="text-4xl sm:text-5xl lg:text-5xl font-bold leading-tight"
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mt-6 lg:mt-10 text-center lg:text-left"
               variants={itemVariants}
             >
               Transformando cliques em{" "}
@@ -98,7 +98,7 @@ export default function Hero() {
 
             {/* Subtitle */}
             <motion.p
-              className="text-lg sm:text-xl text-gray-300 max-w-2xl"
+              className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-2xl text-center lg:text-left"
               variants={itemVariants}
             >
               Tráfego pago do Facebook e Google ADS e Estratégia de Marketing
@@ -106,7 +106,7 @@ export default function Hero() {
 
             {/* Stats */}
             <motion.div
-              className="flex flex-wrap gap-8 pt-4"
+              className="flex flex-wrap justify-center lg:justify-start gap-6 lg:gap-8 pt-4"
               variants={itemVariants}
             >
               <div className="text-center">
@@ -149,7 +149,7 @@ export default function Hero() {
               href="http://wa.me/5541991020364"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary bg-[#c28a32] hover:bg-[#FFA500] text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 relative overflow-hidden group inline-block text-center"
+              className="btn-primary bg-[#c28a32] hover:bg-[#FFA500] text-white font-semibold py-3 px-6 lg:py-4 lg:px-8 rounded-lg text-base lg:text-lg transition-all duration-300 relative overflow-hidden group inline-block text-center w-full sm:w-auto"
               variants={itemVariants}
               whileHover={{
                 scale: 1.05,
@@ -173,15 +173,16 @@ export default function Hero() {
             variants={itemVariants}
           >
             <motion.div
-              className="relative w-full h-120 rounded-lg overflow-hidden"
+              className="relative w-full h-80 sm:h-96 lg:h-[500px] rounded-lg overflow-hidden"
               animate={floatingAnimation}
               whileHover={{ scale: 1.05 }}
             >
               <Image
                 src="/results.png"
                 alt="Lion Media - Resultados e Sucesso"
-                fill
-                className="object-cover rounded-lg"
+                width={500}
+                height={400}
+                className="w-full h-full object-cover rounded-lg"
                 priority
               />
               <div className="absolute inset-0 bg-gradient-to-r from-[#c28a32]/10 to-[#FFD700]/10 opacity-30" />

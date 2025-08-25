@@ -22,7 +22,7 @@ export default function Testimonials() {
     },
     {
       name: "Mercedes-Benz Mansory",
-      company: "Luxury Auto Dealer",
+      company: "Distribuidora de veículos de luxo",
       text: "Trabalhar com a Lion Media foi um divisor de águas. As campanhas que eles criaram trouxeram clientes realmente interessados e aumentaram nossas vendas de forma visível. Uma parceria que vale cada centavo.",
       rating: 5,
       result: "Divisor de Águas",

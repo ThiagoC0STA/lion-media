@@ -1,58 +1,116 @@
-"use client";
+'use client';
 
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import Image from "next/image";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-export default function Testimonials() {
-  const testimonials = [
-    {
-      name: "Dominique Columbus",
-      company: "Ator de Hollywood & Produtor",
-      text: "A Lion Media cuidou do meu marketing como se fosse deles. Em pouco tempo, meu nome começou a aparecer para o público certo e os resultados foram incríveis. Recomendo de olhos fechados.",
-      rating: 5,
-      result: "Resultados Incríveis",
-      image: "/depoimentos/DOMINIQUE COLUMBUS.webp",
+export default function Testimonials({ isEn = false }) {
+  const text = {
+    pt: {
+      mainTitle: "Depoimento dos nossos clientes:",
+      subTitle: "Veja o que nossos clientes têm a dizer sobre os resultados que alcançaram com a Lion Media. Histórias reais de transformação e crescimento.",
+      ctaText: "Você pode ter esses resultados também, basta agendar uma consulta sem compromisso abaixo",
+      ctaButton: "Agendar Consulta Gratuita",
+      testimonials: [
+        {
+          name: "Dominique Columbus",
+          company: "Ator de Hollywood & Produtor",
+          text: "A Lion Media cuidou do meu marketing como se fosse deles. Em pouco tempo, meu nome começou a aparecer para o público certo e os resultados foram incríveis. Recomendo de olhos fechados.",
+          rating: 5,
+          result: "Resultados Incríveis",
+          image: "/depoimentos/DOMINIQUE COLUMBUS.webp",
+        },
+        {
+          name: "Mercedes-Benz Mansory",
+          company: "Distribuidora de veículos de luxo",
+          text: "Trabalhar com a Lion Media foi um divisor de águas. As campanhas que eles criaram trouxeram clientes realmente interessados e aumentaram nossas vendas de forma visível. Uma parceria que vale cada centavo.",
+          rating: 5,
+          result: "Divisor de Águas",
+          image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+        },
+        {
+          name: "Mark Rober",
+          company: "Co-Fundador Team Seas",
+          text: "A equipe entendeu nossa causa e transformou isso em campanhas que emocionaram e engajaram milhares de pessoas. Ver nosso alcance crescer e mais gente apoiando foi algo especial.",
+          rating: 5,
+          result: "Milhares Engajados",
+          image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+        },
+        {
+          name: "Ethan Williams",
+          company: "Empreendedor & Investidor",
+          text: "Antes da Lion Media, eu gastava com anúncios sem ver retorno. Eles entraram, ajustaram tudo e hoje recebo contatos todos os dias de clientes qualificados. Estou mais do que satisfeito.",
+          rating: 5,
+          result: "Clientes Qualificados",
+          image: "/depoimentos/Ethan Williams.jpeg",
+        },
+        {
+          name: "Callum",
+          company: "Mastery Motiv - Empreendedor & Criador de Conteúdo Digital",
+          text: "Eu precisava alcançar mais público para meus produtos e a Lion Media fez isso possível. Atingimos mais de 100 milhões de views em um curto período de tempo, um resultado muito acima do esperado. Fechei novas parcerias e sinto que minha marca está cada vez mais forte.",
+          rating: 5,
+          result: "100M+ Views",
+          image: "/depoimentos/Callum.png",
+        },
+      ],
     },
-    {
-      name: "Mercedes-Benz Mansory",
-      company: "Distribuidora de veículos de luxo",
-      text: "Trabalhar com a Lion Media foi um divisor de águas. As campanhas que eles criaram trouxeram clientes realmente interessados e aumentaram nossas vendas de forma visível. Uma parceria que vale cada centavo.",
-      rating: 5,
-      result: "Divisor de Águas",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-    },
-    {
-      name: "Mark Rober",
-      company: "Co-Fundador Team Seas",
-      text: "A equipe entendeu nossa causa e transformou isso em campanhas que emocionaram e engajaram milhares de pessoas. Ver nosso alcance crescer e mais gente apoiando foi algo especial.",
-      rating: 5,
-      result: "Milhares Engajados",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
-    },
-    {
-      name: "Ethan Williams",
-      company: "Empreendedor & Investidor",
-      text: "Antes da Lion Media, eu gastava com anúncios sem ver retorno. Eles entraram, ajustaram tudo e hoje recebo contatos todos os dias de clientes qualificados. Estou mais do que satisfeito.",
-      rating: 5,
-      result: "Clientes Qualificados",
-      image: "/depoimentos/Ethan Williams.jpeg",
-    },
-    {
-      name: "Callum",
-      company: "Mastery Motiv - Empreendedor & Criador de Conteúdo Digital",
-      text: "Eu precisava alcançar mais público para meus produtos e a Lion Media fez isso possível. Atingimos mais de 100 milhões de views em um curto período de tempo, um resultado muito acima do esperado. Fechei novas parcerias e sinto que minha marca está cada vez mais forte.",
-      rating: 5,
-      result: "100M+ Views",
-      image: "/depoimentos/Callum.png",
-    },
-  ];
+    en: {
+      mainTitle: "What our clients say about us",
+      subTitle: "See what our clients have to say about the results they achieved with Lion Media. Real stories of transformation and growth.",
+      ctaText: "You can achieve these results too. Schedule a free, no-commitment consultation below.",
+      ctaButton: "CONTACT US",
+      testimonials: [
+        {
+          name: "Dominique Colombus",
+          company: "Hollywood Actor & Producer",
+          text: "Lion Media treated my branding like it was their own. In a short time, my digital presence took off, my project gained massive visibility and even got featured on Fintech TV. The results were incredible. I’d recommend them without hesitation.",
+          rating: 5,
+          result: "Incredible Results",
+          image: "/depoimentos/DOMINIQUE COLUMBUS.webp",
+        },
+        {
+          name: "Mercedes-Benz Mansory",
+          company: "Luxury Auto Dealer",
+          text: "Working with Lion Media was a game changer. They elevated our social media presence and helped us reach the right audience. The growth was fast, and the results were outstanding — real clients and a clear boost in sales. A partnership worth every cent.",
+          rating: 5,
+          result: "Game Changer",
+          image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+        },
+        {
+          name: "Mark Rober",
+          company: "Co-Founder of Team Seas",
+          text: "The team understood our mission and turned it into powerful social media campaigns that moved and engaged thousands. Watching our reach grow and seeing more people join the cause was truly special.",
+          rating: 5,
+          result: "Thousands Engaged",
+          image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+        },
+        {
+          name: "Ethan Williams",
+          company: "Entrepreneur & Investor",
+          text: "My digital presence was barely bringing results. Lion Media took over and transformed everything — we reached X views in just Y time. I’m now attracting more clients through social media, and the results have been incredible. I'm more than satisfied.",
+          rating: 5,
+          result: "Qualified Clients",
+          image: "/depoimentos/Ethan Williams.jpeg",
+        },
+        {
+          name: "Callum",
+          company: "Mastery Motiv | Entrepreneur & Digital Content Creator",
+          text: "I needed to grow my reach — and Lion Media went above and beyond. We hit 100M+ views in no time. I secured new partnerships and my brand has never been stronger.",
+          rating: 5,
+          result: "100M+ Views",
+          image: "/depoimentos/Callum.png",
+        },
+      ],
+    }
+  };
+
+  const currentText = isEn ? text.en : text.pt;
+  const currentTestimonials = currentText.testimonials;
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -90,16 +148,13 @@ export default function Testimonials() {
           className="text-center mb-16"
         >
           <h3 className="text-3xl sm:text-4xl font-bold mb-6 text-white">
-            Depoimento dos nossos clientes:
+            {currentText.mainTitle}
           </h3>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Veja o que nossos clientes têm a dizer sobre os resultados que
-            alcançaram com a Lion Media. Histórias reais de transformação e
-            crescimento.
+            {currentText.subTitle}
           </p>
         </motion.div>
 
-        {/* Swiper */}
         <motion.div
           className=" mx-auto mb-12"
           variants={containerVariants}
@@ -136,23 +191,20 @@ export default function Testimonials() {
             loop={true}
             className="testimonials-swiper"
           >
-            {testimonials.map((testimonial, index) => (
+            {currentTestimonials.map((testimonial, index) => (
               <SwiperSlide key={index}>
                 <motion.div
                   variants={itemVariants}
                   className="bg-gradient-to-br from-gray-800 via-gray-900 to-gray-800 p-8 rounded-2xl border border-gray-700/50 h-[420px] flex flex-col items-center justify-center text-center relative overflow-hidden group hover:border-[#c28a32]/30 transition-all duration-300"
                 >
-                  {/* Background Effect */}
                   <div className="absolute inset-0 bg-gradient-to-br from-[#c28a32]/5 to-[#FFD700]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                  {/* Testimonial Text */}
                   <div className="mb-6 relative z-10 flex-1 flex items-center">
                     <p className="text-gray-200 text-sm leading-relaxed max-w-sm font-medium">
                       &quot;{testimonial.text}&quot;
                     </p>
                   </div>
 
-                  {/* Author Info */}
                   <div className="border-t border-gray-600/50 pt-6 w-full relative z-10">
                     <div className="flex items-center justify-start gap-4 mb-4">
                       <div className="relative w-12 h-12">
@@ -178,7 +230,6 @@ export default function Testimonials() {
                     </div>
                   </div>
 
-                  {/* Hover Effect */}
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-br from-[#c28a32]/10 to-[#FFD700]/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     initial={{ opacity: 0 }}
@@ -189,11 +240,9 @@ export default function Testimonials() {
             ))}
           </Swiper>
 
-          {/* Custom Navigation Buttons */}
           <div className="swiper-button-prev !text-[#c28a32] !bg-gray-800 !w-12 !h-12 !rounded-full !flex !items-center !justify-center hover:!bg-[#c28a32] hover:!text-white transition-all duration-300 !left-4"></div>
           <div className="swiper-button-next !text-[#c28a32] !bg-gray-800 !w-12 !h-12 !rounded-full !flex !items-center !justify-center hover:!bg-[#c28a32] hover:!text-white transition-all duration-300 !right-4"></div>
 
-          {/* Custom Pagination */}
           <div className="swiper-pagination !bottom-0 !mt-8"></div>
         </motion.div>
 
@@ -205,8 +254,7 @@ export default function Testimonials() {
           transition={{ duration: 0.8, delay: 0.5 }}
         >
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Você pode ter esses resultados também, basta agendar uma consulta
-            sem compromisso abaixo
+            {currentText.ctaText}
           </p>
 
           <motion.a
@@ -220,7 +268,7 @@ export default function Testimonials() {
             }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="relative z-10">Agendar Consulta Gratuita</span>
+            <span className="relative z-10">{currentText.ctaButton}</span>
             <motion.div
               className="absolute inset-0 bg-gradient-to-r from-[#FFD700] to-[#c28a32]"
               initial={{ x: "-100%" }}

@@ -3,7 +3,92 @@
 import { motion } from 'framer-motion';
 import { DollarSign, TrendingUp, Target, Users, Handshake, Lightbulb } from 'lucide-react';
 
-export default function Services() {
+export default function Services({ isEn = false }) {
+  const text = {
+    pt: {
+      mainTitle: "Nossos serviços são para empresas que:",
+      subTitle: "Identificamos os desafios mais comuns que impedem o crescimento do seu negócio e oferecemos soluções personalizadas para cada situação.",
+      ctaButton: "Agendar Consultoria Gratuita",
+      ctaDisclaimer: "⚡ Consultoria gratuita - Sem compromisso",
+      services: [
+        {
+          icon: DollarSign,
+          title: "Estão cansadas de gastar dinheiro com marketing e não ver resultado algum",
+          description: "Transformamos desperdício em investimento com estratégias que geram ROI real"
+        },
+        {
+          icon: TrendingUp,
+          title: "Querem aumentar suas vendas e ver resultados reais no marketing",
+          description: "Campanhas que convertem visitantes em clientes pagantes"
+        },
+        {
+          icon: Target,
+          title: "Precisam de uma estratégia clara e bem definida para seus negócios",
+          description: "Planejamento estratégico que alinha marketing com objetivos de negócio"
+        },
+        {
+          icon: Users,
+          title: "Desejam que o marketing seja direcionado para o cliente que tem desejo de verdade pelo seu produto ou serviço",
+          description: "Segmentação avançada que atinge o público certo no momento certo"
+        },
+        {
+          icon: Handshake,
+          title: "Buscam resultados constantes mensais e escalar suas vendas mesmo fora da temporada usando tráfego pago",
+          description: "Crescimento sustentável e consistente com campanhas otimizadas para escala"
+        },
+        {
+          icon: Lightbulb,
+          title: "Desejam um atendimento personalizado focado 100% em sua dificuldade no marketing?",
+          description: "Suporte dedicado que entende suas necessidades específicas"
+        }
+      ],
+    },
+    en: {
+      mainTitle: "Our services are for businesses that",
+      subTitle: "We identify the most common obstacles holding back your growth on social media and deliver tailored solutions for each situation.",
+      ctaButton: "Schedule Free Consultation",
+      ctaDisclaimer: "⚡ Free consultation - No commitment",
+      services: [
+        {
+          icon: DollarSign,
+          title: "Are tired of posting and spending on social media with no return",
+          description: "We turn wasted effort into real results through strategies that drive engagement and real growth."
+        },
+        {
+          icon: TrendingUp,
+          title: "Want to grow on Instagram and Facebook and attract more clients every day",
+          description: "Content and campaigns designed to bring in qualified followers and ready-to-buy customers."
+        },
+        {
+          icon: Target,
+          title: "Need a clear and practical social media strategy",
+          description: "Strategic planning focused on results and aligned with your business goals."
+        },
+        // {
+        //   icon: Users,
+        //   title: "Need a clear and practical social media strategy",
+        //   description: "Strategic planning focused on results and aligned with your business goals."
+        // },
+        // {
+        //   icon: Handshake,
+        //   title: "Want to grow on Instagram and Facebook and attract more clients every day",
+        //   description: "Content and campaigns designed to bring in qualified followers and ready-to-buy customers."
+        // },
+        // {
+        //   icon: Lightbulb,
+        //   title: "Are tired of posting and spending on social media with no return",
+        //   description: "We turn wasted effort into real results through strategies that drive engagement and real growth."
+        // }
+      ],
+    }
+  };
+
+  const currentText = isEn ? text.en : text.pt;
+  const currentServices = currentText.services.map((service, index) => ({
+    ...service,
+    icon: text.pt.services[index]?.icon,
+  }));
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -26,39 +111,6 @@ export default function Services() {
     }
   };
 
-  const services = [
-    {
-      icon: DollarSign,
-      title: "Estão cansadas de gastar dinheiro com marketing e não ver resultado algum",
-      description: "Transformamos desperdício em investimento com estratégias que geram ROI real"
-    },
-    {
-      icon: TrendingUp,
-      title: "Querem aumentar suas vendas e ver resultados reais no marketing",
-      description: "Campanhas que convertem visitantes em clientes pagantes"
-    },
-    {
-      icon: Target,
-      title: "Precisam de uma estratégia clara e bem definida para seus negócios",
-      description: "Planejamento estratégico que alinha marketing com objetivos de negócio"
-    },
-    {
-      icon: Users,
-      title: "Desejam que o marketing seja direcionado para o cliente que tem desejo de verdade pelo seu produto ou serviço",
-      description: "Segmentação avançada que atinge o público certo no momento certo"
-    },
-    {
-      icon: Handshake,
-      title: "Buscam resultados constantes mensais e escalar suas vendas mesmo fora da temporada usando tráfego pago",
-      description: "Crescimento sustentável e consistente com campanhas otimizadas para escala"
-    },
-    {
-      icon: Lightbulb,
-      title: "Desejam um atendimento personalizado focado 100% em sua dificuldade no marketing?",
-      description: "Suporte dedicado que entende suas necessidades específicas"
-    }
-  ];
-
   return (
     <section id="servicos" className="py-20 px-4 sm:px-8 lg:px-16 bg-black">
       <div className="max-w-7xl mx-auto">
@@ -70,11 +122,10 @@ export default function Services() {
           className="text-center mb-16"
         >
           <h3 className="text-3xl sm:text-4xl font-bold mb-6 text-white">
-            Nossos serviços são para empresas que:
+            {currentText.mainTitle}
           </h3>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Identificamos os desafios mais comuns que impedem o crescimento do seu negócio 
-            e oferecemos soluções personalizadas para cada situação.
+            {currentText.subTitle}
           </p>
         </motion.div>
 
@@ -85,8 +136,9 @@ export default function Services() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          {services.map((service, index) => {
+          {currentServices.map((service, index) => {
             const IconComponent = service.icon;
+
             return (
               <motion.div 
                 key={index}
@@ -102,7 +154,7 @@ export default function Services() {
                     transition={{ type: "spring", stiffness: 300 }}
                   >
                     <div className="w-16 h-16 bg-gradient-to-br from-[#c28a32] to-[#FFD700] rounded-full flex items-center justify-center">
-                      <IconComponent className="w-8 h-8 text-white" />
+                     {IconComponent != null && <IconComponent className="w-8 h-8 text-white" />}
                     </div>
                   </motion.div>
                   
@@ -114,8 +166,8 @@ export default function Services() {
                     {service.description}
                   </p>
 
-                                      <motion.div 
-                      className="absolute inset-0 bg-gradient-to-br from-[#c28a32]/10 to-[#FFD700]/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  <motion.div 
+                    className="absolute inset-0 bg-gradient-to-br from-[#c28a32]/10 to-[#FFD700]/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     initial={{ opacity: 0 }}
                     whileHover={{ opacity: 1 }}
                   />
@@ -125,6 +177,8 @@ export default function Services() {
           })}
         </motion.div>
 
+{
+  !isEn && (
         <motion.div 
           className="text-center"
           initial={{ opacity: 0, y: 30 }}
@@ -143,7 +197,7 @@ export default function Services() {
             }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="relative z-10">Agendar Consultoria Gratuita</span>
+            <span className="relative z-10">{currentText.ctaButton}</span>
             <motion.div
               className="absolute inset-0 bg-gradient-to-r from-[#FFD700] to-[#c28a32]"
               initial={{ x: "-100%" }}
@@ -153,10 +207,12 @@ export default function Services() {
           </motion.a>
           
           <p className="text-gray-400 text-sm mt-4">
-            ⚡ Consultoria gratuita - Sem compromisso
+            {currentText.ctaDisclaimer}
           </p>
         </motion.div>
+  )
+}
       </div>
     </section>
   );
-} 
+}

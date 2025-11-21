@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import { BarChart3, Users, TrendingUp, Megaphone, Check } from 'lucide-react';
 
 export default function AboutUs({ isEn = false }) {
@@ -180,7 +179,7 @@ export default function AboutUs({ isEn = false }) {
 
               return (
                 <motion.div 
-                  key={index}
+                  key={feature.title}
                   className="flex items-start gap-4 p-4 rounded-lg hover:bg-gray-900 transition-colors duration-300"
                   variants={rightItemVariants}
                   whileHover={{ x: 10 }}

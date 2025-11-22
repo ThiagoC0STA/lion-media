@@ -86,7 +86,7 @@ export default function OurResults() {
           </motion.div>
 
           {/* CTA Button */}
-          <motion.button
+          {/* <motion.button
             className="bg-white hover:bg-gray-200 text-black font-bold py-4 px-12 rounded-lg text-lg transition-all duration-300 relative overflow-hidden group"
             variants={itemVariants}
             whileHover={{
@@ -102,7 +102,7 @@ export default function OurResults() {
               whileHover={{ x: "0%" }}
               transition={{ duration: 0.3 }}
             />
-          </motion.button>
+          </motion.button> */}
         </motion.div>
       </div>
     </section>

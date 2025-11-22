@@ -6,7 +6,6 @@ import {
   ChevronDown,
   ChevronUp,
   CheckCircle,
-  Clock,
   DollarSign,
   Target,
 } from "lucide-react";
@@ -133,7 +132,7 @@ export default function FAQ() {
 
             return (
               <motion.div
-                key={index}
+                key={faq.question}
                 className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl border border-gray-700 overflow-hidden"
                 variants={itemVariants}
                 transition={{ type: "spring", stiffness: 300 }}

@@ -27,10 +27,10 @@ export default function Customers() {
   };
 
   return (
-    <section className="py-16 px-4 sm:px-8 lg:px-16 bg-black">
+    <section className="py-8 px-4 sm:px-8 lg:px-16 bg-black">
       <div className="max-w-7xl mx-auto">
         <motion.div 
-          className="border-t border-gray-800 pt-12"
+          className="border-y border-gray-800 py-12"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -40,7 +40,7 @@ export default function Customers() {
             className="text-center text-2xl sm:text-3xl font-semibold mb-12 text-white"
             variants={itemVariants}
           >
-           Our costumers
+           Our Custumers
           </motion.h3>
           
           <motion.div 

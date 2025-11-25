@@ -94,7 +94,7 @@ export default function HeroSocial() {
                   repeat: Infinity,
                 }}
               >
-                NEW IDEAL COSTUMERS
+                NEW IDEAL CUSTUMERS
               </motion.span>{" "}
               {/* A terceira parte da frase em português foi removida para usar apenas a frase em inglês. */}
             </motion.h2>
@@ -171,26 +171,36 @@ export default function HeroSocial() {
           </motion.div>
 
           {/* Right Content - Imagem Principal */}
-          <motion.div
-            className="flex-1 flex justify-center lg:justify-end"
-            variants={itemVariants}
-          >
-            <motion.div
-              className="relative w-full h-80 sm:h-96 lg:h-[500px] rounded-lg overflow-hidden"
-              animate={floatingAnimation}
-              whileHover={{ scale: 1.05 }}
-            >
-              <Image
-                src="/socialmedia/mockup_metrics.png"
-                alt="Lion Media - Resultados e Sucesso"
-                width={500}
-                height={400}
-                className="w-full h-full object-scale-down rounded-lg"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#c28a32]/10 to-[#FFD700]/10 opacity-30" />
-            </motion.div>
-          </motion.div>
+         <motion.div
+  className="flex-1 w-full flex justify-center lg:justify-end"
+  variants={itemVariants}
+>
+  <motion.div
+    className="relative w-full h-80 sm:h-96 lg:h-[500px] rounded-lg overflow-hidden"
+    animate={floatingAnimation}
+    whileHover={{ scale: 1.05 }}
+  >
+    {/* ✨ NOVO ELEMENTO DE "BRILHO OFUSCADO" (BLURRED GLOW) */}
+    <div
+  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
+             w-1/2 h-1/3 
+             bg-yellow-500 from-yellow-500/50 to-transparent 
+             filter blur-3xl opacity-50 
+             pointer-events-none" 
+/>
+    
+    <Image
+      src="/socialmedia/mockup_metrics.png"
+      alt="Lion Media - Resultados e Sucesso"
+      width={500}
+      height={400}
+      className="w-full h-full object-scale-down rounded-lg relative z-10" // Adicione z-10 para garantir que a imagem fique por cima
+      priority
+    />
+    {/* O seu overlay de gradiente atual pode ser mantido ou removido dependendo do resultado que deseja: */}
+    {/* <div className="absolute inset-0 bg-gradient-to-r from-[#c28a32]/10 to-[#FFD700]/10 opacity-30" /> */}
+  </motion.div>
+</motion.div>
         </motion.div>
       </div>
     </section>

@@ -15,7 +15,7 @@ import React from "react";
 export default function SocialMedia() {
   return (
     <div className="min-h-screen bg-black text-white">
-      <Header />
+      <Header isEn={true}/>
       <HeroSocial />
       <Customers />
       <AboutUs isEn={true} />

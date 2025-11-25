@@ -62,7 +62,7 @@ export default function Testimonials({ isEn = false }) {
     en: {
       mainTitle: "What our clients say about us",
       subTitle: "See what our clients have to say about the results they achieved with Lion Media. Real stories of transformation and growth.",
-      ctaText: "You can achieve these results too. Schedule a free, no-commitment consultation below.",
+      ctaText: "You can get results like this too. Claim your free, no-obligation consultation below.",
       ctaButton: "CONTACT US",
       testimonials: [
         {
@@ -253,8 +253,8 @@ export default function Testimonials({ isEn = false }) {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, delay: 0.5 }}
         >
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            {currentText.ctaText}
+          <p className="text-2xl font-bold text-gray-300 max-w-3xl mx-auto">
+            {currentText.ctaText} 
           </p>
 
           <motion.a

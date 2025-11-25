@@ -121,7 +121,7 @@ export default function AboutUs({ isEn = false }) {
           viewport={{ once: true, amount: 0.3 }}
         >
           <motion.div 
-            className="space-y-8"
+            className="space-y-8 grid"
             variants={itemVariants}
           >
             <motion.h3 

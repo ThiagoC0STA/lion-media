@@ -15,7 +15,7 @@ import React from "react";
 export default function SocialMedia() {
   return (
     <div className="min-h-screen bg-black text-white">
-      <Header isEn={true}/>
+      <Header isEn={true} />
       <HeroSocial />
       <Customers />
       <AboutUs isEn={true} />
@@ -23,10 +23,10 @@ export default function SocialMedia() {
       <Services isEn={true} />
       <OurResults />
       <Testimonials isEn={true} />
-            {/* <GlobalBrands />
+      {/* <GlobalBrands />
             <FAQ /> */}
-            {/* <CTA /> */}
-            <Footer isEn={true}/>
+      {/* <CTA /> */}
+      <Footer isEn={true} />
     </div>
   );
 }

@@ -112,7 +112,7 @@ export default function Services({ isEn = false }) {
   };
 
   return (
-    <section id="servicos" className="py-20 px-4 sm:px-8 lg:px-16 bg-black">
+    <section id="servicos" className="py-12 px-4 sm:px-8 lg:px-16 bg-black">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

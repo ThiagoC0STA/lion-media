@@ -4,8 +4,25 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 
-export default function Header() {
+const headerText = {
+  pt: {
+    services: "Serviços",
+    about: "Sobre",
+    testimonials: "Depoimentos",
+    contactUs: "Fale Conosco",
+  },
+  en: {
+    services: "Services",
+    about: "About",
+    testimonials: "Testimonials",
+    contactUs: "Contact Us",
+  },
+};
+
+export default function Header({ isEn = false }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const currentText = isEn ? headerText.en : headerText.pt;
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -51,13 +68,14 @@ export default function Header() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
             >
+              {/* Desktop Links */}
               <motion.a
                 href="#servicos"
                 className="text-gray-300 hover:text-white transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Serviços
+                {currentText.services}
               </motion.a>
               <motion.a
                 href="#sobre"
@@ -65,7 +83,7 @@ export default function Header() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Sobre
+                {currentText.about}
               </motion.a>
               <motion.a
                 href="#depoimentos"
@@ -73,7 +91,7 @@ export default function Header() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Depoimentos
+                {currentText.testimonials}
               </motion.a>
               <motion.a
                 href="http://wa.me/5541991020364"
@@ -83,7 +101,7 @@ export default function Header() {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Fale Conosco
+                {currentText.contactUs}
               </motion.a>
             </motion.nav>
 
@@ -131,12 +149,13 @@ export default function Header() {
             transition={{ duration: 0.2 }}
           >
             <div className="flex flex-col items-center justify-center h-full space-y-6">
+              {/* Mobile Links */}
               <a
                 href="#servicos"
                 className="text-white text-lg hover:text-[#c28a32] transition-colors"
                 onClick={closeMenu}
               >
-                Serviços
+                {currentText.services}
               </a>
 
               <a
@@ -144,7 +163,7 @@ export default function Header() {
                 className="text-white text-lg hover:text-[#c28a32] transition-colors"
                 onClick={closeMenu}
               >
-                Sobre
+                {currentText.about}
               </a>
 
               <a
@@ -152,7 +171,7 @@ export default function Header() {
                 className="text-white text-lg hover:text-[#c28a32] transition-colors"
                 onClick={closeMenu}
               >
-                Depoimentos
+                {currentText.testimonials}
               </a>
 
               <a
@@ -162,7 +181,7 @@ export default function Header() {
                 className="bg-[#c28a32] hover:bg-[#FFA500] text-white font-semibold py-2 px-6 rounded-lg transition-colors"
                 onClick={closeMenu}
               >
-                Fale Conosco
+                {currentText.contactUs}
               </a>
             </div>
           </motion.div>

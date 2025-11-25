@@ -130,6 +130,7 @@ const config: Config = {
         "gradient-secondary":
           "linear-gradient(135deg, #f97316 0%, #fb923c 100%)",
         "gradient-accent": "linear-gradient(135deg, #eab308 0%, #fde047 100%)",
+        "radial-gradient": "radial-gradient(var(--tw-gradient-stops))",
       },
       boxShadow: {
         glow: "0 0 20px rgba(194, 138, 50, 0.3)",

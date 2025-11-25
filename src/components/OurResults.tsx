@@ -41,7 +41,7 @@ export default function OurResults() {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-8 lg:px-16 pt-16 bg-black">
+    <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-8 lg:px-16 pt-10 bg-black">
       <div className="max-w-7xl mx-auto w-full relative z-10">
         <motion.div
           className="flex flex-col items-center justify-center gap-12 lg:gap-16"

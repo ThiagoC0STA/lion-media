@@ -14,7 +14,7 @@ export default function Footer({ isEn = false }) {
     },
     en: {
       description: `Lion Media — Turning businesses into powerful brands. Proven results across 4 continents.`,
-      contact: "Contact",
+      contact: "Contact Us",
     },
   };
 

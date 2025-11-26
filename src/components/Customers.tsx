@@ -40,7 +40,7 @@ export default function Customers() {
             className="text-center text-2xl sm:text-3xl font-semibold mb-12 text-white"
             variants={itemVariants}
           >
-           Our Custumers
+           Our Customers
           </motion.h3>
           
           <motion.div 

@@ -94,7 +94,7 @@ export default function HeroSocial() {
                   repeat: Infinity,
                 }}
               >
-                NEW IDEAL CUSTUMERS
+                NEW IDEAL CUSTOMERS
               </motion.span>{" "}
               {/* A terceira parte da frase em português foi removida para usar apenas a frase em inglês. */}
             </motion.h2>
@@ -183,7 +183,7 @@ export default function HeroSocial() {
               {/* ✨ NOVO ELEMENTO DE "BRILHO OFUSCADO" (BLURRED GLOW) */}
               <div
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
-             md:w-1/2 md:h-1/3 w-[55%] h-[55%]
+             md:w-[70%] md:h-1/3 w-[55%] h-[55%]
              bg-yellow-500 from-yellow-500/50 to-transparent 
              filter blur-3xl opacity-50 
              pointer-events-none"

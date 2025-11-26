@@ -66,7 +66,7 @@ export default function Testimonials({ isEn = false }) {
       ctaButton: "CONTACT US",
       testimonials: [
         {
-          name: "Dominique Colombus",
+          name: "Dominique Columbus",
           company: "Hollywood Actor & Producer",
           text: "Lion Media treated my branding like it was their own. In a short time, my digital presence took off, my project gained massive visibility and even got featured on Fintech TV. The results were incredible. I’d recommend them without hesitation.",
           rating: 5,

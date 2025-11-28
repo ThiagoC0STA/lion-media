@@ -1,35 +1,74 @@
-"use client";
+'use client';
 
 import { motion } from "framer-motion";
 import { Users, DollarSign, Globe, Star } from "lucide-react";
 
-export default function Stats() {
-  const stats = [
-    {
-      number: 50,
-      suffix: "+",
-      label: "Clientes Satisfeitos",
-      icon: Users,
+export default function Stats({ isEn = false }) {
+  const text = {
+    pt: {
+      mainTitle: "Números que Falam por Si",
+      subTitle: "Resultados reais que transformaram centenas de empresas em todo o mundo",
+      stats: [
+        {
+          number: 50,
+          suffix: "+",
+          label: "Clientes Satisfeitos",
+          icon: Users,
+        },
+        {
+          number: 38,
+          suffix: "%",
+          label: "Aumento em Vendas",
+          icon: DollarSign,
+        },
+        {
+          number: 4,
+          suffix: "",
+          label: "Continentes",
+          icon: Globe,
+        },
+        {
+          number: 98,
+          suffix: "%",
+          label: "Taxa de Satisfação",
+          icon: Star,
+        },
+      ],
     },
-    {
-      number: 38,
-      suffix: "%",
-      label: "Aumento em Vendas",
-      icon: DollarSign,
+    en: {
+      mainTitle: "Numbers that speak for itself",
+      subTitle: "Real results that boost digital presence and sales for brands around the world.",
+      stats: [
+        {
+          number: 50,
+          suffix: "+",
+          label: "Brands Served",
+          icon: Users,
+        },
+        {
+          number: 38,
+          suffix: "%",
+          label: "Average Growth on Social Media",
+          icon: DollarSign,
+        },
+        {
+          number: 4,
+          suffix: "",
+          label: "Continents with Active Clients",
+          icon: Globe,
+        },
+        {
+          number: 98,
+          suffix: "%",
+          label: "Satisfaction Rate",
+          icon: Star,
+        },
+      ],
     },
-    {
-      number: 4,
-      suffix: "",
-      label: "Continentes",
-      icon: Globe,
-    },
-    {
-      number: 98,
-      suffix: "%",
-      label: "Taxa de Satisfação",
-      icon: Star,
-    },
-  ];
+  };
+
+  const currentText = isEn ? text.en : text.pt;
+  const currentStats = currentText.stats;
 
   return (
     <section className="py-20 px-4 sm:px-8 lg:px-16 bg-gradient-to-br from-gray-900 to-black">
@@ -42,11 +81,10 @@ export default function Stats() {
           className="text-center mb-16"
         >
           <h3 className="text-3xl sm:text-4xl font-bold mb-6 text-white">
-            Números que Falam por Si
+            {currentText.mainTitle}
           </h3>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Resultados reais que transformaram centenas de empresas em todo o
-            mundo
+            {currentText.subTitle}
           </p>
         </motion.div>
 
@@ -57,7 +95,7 @@ export default function Stats() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          {stats.map((stat, index) => {
+          {currentStats.map((stat, index) => {
             const IconComponent = stat.icon;
             return (
               <motion.div

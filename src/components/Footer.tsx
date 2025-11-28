@@ -4,7 +4,21 @@ import { motion } from "framer-motion";
 import { Phone, MessageCircle, Mail } from "lucide-react";
 import Image from "next/image";
 
-export default function Footer() {
+export default function Footer({ isEn = false }) {
+  const text = {
+    pt: {
+      description: `Lion Media — Especialistas em marketing digital que transformam
+              pequenas empresas em grandes marcas. Resultados comprovados em 4
+              continentes.`,
+      contact: "Contato",
+    },
+    en: {
+      description: `Lion Media — Turning businesses into powerful brands. Proven results across 4 continents.`,
+      contact: "Contact Us",
+    },
+  };
+
+  const currentText = isEn ? text.en : text.pt;
   return (
     <footer className="py-16 px-4 sm:px-8 lg:px-16 bg-black border-t border-gray-800">
       <div className="max-w-7xl mx-auto">
@@ -37,9 +51,7 @@ export default function Footer() {
             </motion.div>
 
             <p className="text-gray-300 mb-6 max-w-md">
-              Lion Media — Especialistas em marketing digital que transformam
-              pequenas empresas em grandes marcas. Resultados comprovados em 4
-              continentes.
+              {currentText.description}
             </p>
 
             <div className="flex gap-4">
@@ -78,13 +90,15 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Contato</h4>
+            <h4 className="text-white font-semibold mb-4">
+              {currentText.contact}
+            </h4>
             <ul className="space-y-2">
               <li className="text-gray-400">
                 📧 comercial@lionmediadigital.com
               </li>
               <li className="text-gray-400">📱 +55 41 99102-0364</li>
-              <li className="text-gray-400">📍 Itapema, SC</li>
+              {!isEn && <li className="text-gray-400">📍 Itapema, SC</li>}
             </ul>
           </div>
         </motion.div>
@@ -98,24 +112,27 @@ export default function Footer() {
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            Copyright © 2025. Desenvolvido por Lion Media Digital. Todos os
-            direitos reservados.
+            Copyright © 2025.{" "}
+            {!isEn &&
+              "Desenvolvido por Lion Media Digital. Todos os direitos reservados."}
           </p>
 
-          <div className="flex gap-6 text-sm">
-            <a
-              href="/politica-privacidade"
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              Política de Privacidade
-            </a>
-            <a
-              href="/termos-uso"
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              Termos de Uso
-            </a>
-          </div>
+          {!isEn && (
+            <div className="flex gap-6 text-sm">
+              <a
+                href="/politica-privacidade"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                Política de Privacidade
+              </a>
+              <a
+                href="/termos-uso"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                Termos de Uso
+              </a>
+            </div>
+          )}
         </motion.div>
       </div>
     </footer>

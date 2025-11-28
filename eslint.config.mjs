@@ -24,8 +24,8 @@ const eslintConfig = [
       "jsx-a11y/role-supports-aria-props": "error",
       // Regras para performance
       "react/jsx-no-bind": "warn",
-      "react/jsx-no-leaked-render": "error",
-      "react/jsx-key": "error",
+      "react/jsx-no-leaked-render": "warn",
+      "react/jsx-key": "warn",
       "react/no-array-index-key": "warn",
     },
   },

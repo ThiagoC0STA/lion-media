@@ -1,8 +1,11 @@
+/* eslint-disable react/jsx-no-leaked-render */
+/* eslint-disable react/jsx-no-bind */
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
+import ContactUs from "./ContactUs";
 
 const headerText = {
   pt: {
@@ -21,6 +24,10 @@ const headerText = {
 
 export default function Header({ isEn = false }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [openContactModal, setOpenContactModal] = useState(false);
+
+  const openModal = () => setOpenContactModal(true);
+  const closeModal = () => setOpenContactModal(false);
 
   const currentText = isEn ? headerText.en : headerText.pt;
 
@@ -93,16 +100,27 @@ export default function Header({ isEn = false }) {
               >
                 {currentText.testimonials}
               </motion.a>
-              <motion.a
-                href="http://wa.me/5541991020364"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-[#c28a32] hover:bg-[#FFA500] text-white font-semibold py-2 px-6 rounded-lg transition-all duration-300 inline-block"
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                {currentText.contactUs}
-              </motion.a>
+              {isEn ? (
+                <motion.button
+                  onClick={openModal}
+                  className="bg-[#c28a32] hover:bg-[#FFA500] text-white font-semibold py-2 px-6 rounded-lg transition-all duration-300 inline-block"
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {currentText.contactUs}
+                </motion.button>
+              ) : (
+                <motion.a
+                  href="http://wa.me/5541991020364"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#c28a32] hover:bg-[#FFA500] text-white font-semibold py-2 px-6 rounded-lg transition-all duration-300 inline-block"
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {currentText.contactUs}
+                </motion.a>
+              )}
             </motion.nav>
 
             <motion.button
@@ -157,7 +175,6 @@ export default function Header({ isEn = false }) {
               >
                 {currentText.services}
               </a>
-
               <a
                 href="#sobre"
                 className="text-white text-lg hover:text-[#c28a32] transition-colors"
@@ -165,7 +182,6 @@ export default function Header({ isEn = false }) {
               >
                 {currentText.about}
               </a>
-
               <a
                 href="#depoimentos"
                 className="text-white text-lg hover:text-[#c28a32] transition-colors"
@@ -173,20 +189,32 @@ export default function Header({ isEn = false }) {
               >
                 {currentText.testimonials}
               </a>
-
-              <a
-                href="http://wa.me/5541991020364"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-[#c28a32] hover:bg-[#FFA500] text-white font-semibold py-2 px-6 rounded-lg transition-colors"
-                onClick={closeMenu}
-              >
-                {currentText.contactUs}
-              </a>
+              {isEn ? (
+                <motion.button
+                  onClick={openModal}
+                  className="bg-[#c28a32] hover:bg-[#FFA500] text-white font-semibold py-2 px-6 rounded-lg transition-all duration-300 inline-block"
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {currentText.contactUs}
+                </motion.button>
+              ) : (
+                <a
+                  href="http://wa.me/5541991020364"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#c28a32] hover:bg-[#FFA500] text-white font-semibold py-2 px-6 rounded-lg transition-colors"
+                  onClick={closeMenu}
+                >
+                  {currentText.contactUs}
+                </a>
+              )}{" "}
             </div>
           </motion.div>
         )}
       </AnimatePresence>
+
+      <ContactUs open={openContactModal} onClose={closeModal} />
     </>
   );
 }

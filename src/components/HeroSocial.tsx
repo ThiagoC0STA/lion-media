@@ -188,7 +188,6 @@ export default function HeroSocial() {
                 animate={floatingAnimation}
                 whileHover={{ scale: 1.05 }}
               >
-                {/* ✨ NOVO ELEMENTO DE "BRILHO OFUSCADO" (BLURRED GLOW) */}
                 <div
                   className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
               md:w-[60%] md:h-1/3 w-[50%] h-[55%]

@@ -26,7 +26,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         message:
-          "Erro de configuração: Variáveis de ambiente (EMAIL_USER/PASS) faltando.",
+          "Configuration Error: Missing environment variables (EMAIL_USER/PASS).", // Traduzido
       },
       { status: 500 }
     );
@@ -37,16 +37,15 @@ export async function POST(request: Request) {
     data = (await request.json()) as FormData;
   } catch (e) {
     return NextResponse.json(
-      { message: "Requisição inválida (JSON body malformado)." },
+      { message: "Invalid Request (malformed JSON body)." }, // Traduzido
       { status: 400 }
     );
   }
-  const { firstName, lastName, email, phone, type } = data;
+  const { firstName, lastName, email, phone, type } = data; // 3. Validação básica
 
-  // 3. Validação básica
   if (!firstName || !email || type === "Please Select") {
     return NextResponse.json(
-      { message: "Campos obrigatórios incompletos" },
+      { message: "Incomplete required fields." }, // Traduzido
       { status: 400 }
     );
   }
@@ -57,24 +56,23 @@ export async function POST(request: Request) {
       to: "lionmediacomercial@gmail.com",
       subject: `Nova Solicitação de Demo de ${firstName} ${lastName}`,
       html: `
-        <h3>Detalhes da Solicitação de Demo:</h3>
-        <p><strong>Nome Completo:</strong> ${firstName} ${lastName}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Telefone:</strong> ${phone}</p>
-        <p><strong>Tipo (Agente/Time/Corretora):</strong> ${type}</p>
-        <!-- isCustomer e website removidos do corpo do e-mail -->
-      `,
+          <h3>Detalhes da Solicitação de Demo:</h3>
+          <p><strong>Nome Completo:</strong> ${firstName} ${lastName}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Telefone:</strong> ${phone}</p>
+          <p><strong>Tipo (Agente/Time/Corretora):</strong> ${type}</p>
+                  `,
     };
 
     await transporter.sendMail(mailOptions);
     return NextResponse.json(
-      { message: "E-mail enviado com sucesso!" },
+      { message: "Email sent successfully!" }, // Traduzido
       { status: 200 }
     );
   } catch (error) {
     console.error("Erro ao enviar e-mail:", error);
     return NextResponse.json(
-      { message: "Erro interno do servidor." },
+      { message: "Internal Server Error." }, // Traduzido
       { status: 500 }
     );
   }

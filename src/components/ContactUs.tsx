@@ -150,8 +150,8 @@ export default function ContactUs({ open, onClose }: IContactUsProps) {
               <option value="Please Select" disabled>
                 Please Select
               </option>
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
+              <option value="Agent">Agent</option>
+              <option value="Team">Team</option>
             </select>
           </div>
 

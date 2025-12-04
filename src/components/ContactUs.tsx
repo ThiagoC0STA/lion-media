@@ -72,12 +72,6 @@ export default function ContactUs({ open, onClose }: IContactUsProps) {
           <h1 className="text-4xl font-semibold text-gray-900! mb-1">
             Book a Demo
           </h1>
-          <p className="text-gray-700 text-xs">
-            Call us at{" "}
-            <a href="tel:3109551077" className="underline">
-              (310) 955-1077
-            </a>
-          </p>
         </div>
 
         <form
@@ -144,7 +138,7 @@ export default function ContactUs({ open, onClose }: IContactUsProps) {
           {/* Agent / Team / Brokerage */}
           <div className="flex flex-col">
             <label className="text-xs font-medium text-gray-700 mb-1">
-              Are you an agent, team, or brokerage?*
+              Are you an agent or team?*
             </label>
             <select
               name="type"
@@ -176,7 +170,7 @@ export default function ContactUs({ open, onClose }: IContactUsProps) {
           )}
           {status === "error" && (
             <div className="p-3 mt-2 rounded-lg bg-red-100 text-red-700 text-sm font-semibold flex items-center">
-              <span className="mr-2">❌</span> Error sending. Please call the number above.
+              <span className="mr-2">❌</span> Error to sending. 
             </div>
           )}
         </form>
